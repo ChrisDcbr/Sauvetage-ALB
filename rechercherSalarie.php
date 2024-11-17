@@ -22,8 +22,14 @@ if (!isset($_SESSION['profil'])) {
         $profil = $_SESSION['profil'];
         if ($profil == "admin") {
             echo "<a href='accueil-admin.php' class='link'>Accueil</a>";
-        } else {
+        } else if ($profil == "secretaire")
+        {
             echo "<a href='accueil-secretaire.php' class='link'>Accueil</a>";
+           
+        }
+        else 
+        {
+            echo "<a href='accueil-section.php' class='link'>Accueil</a>";
         }
         ?>
         <a href="deconnexion.php" class="link">Déconnexion</a>
